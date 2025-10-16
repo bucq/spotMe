@@ -1,6 +1,6 @@
 # 06 - API設計
 
-> [[05-ステータス管理機能]] | [[BondPoint設計書]] | Next: [[07-UI-UX設計]]
+> [[05-ステータス管理機能]] | [[spotMe設計書]] | Next: [[07-UI-UX設計]]
 
 ## 🔌 RESTful API エンドポイント設計
 
@@ -97,7 +97,7 @@ Content-Type: application/json
 
 {
   "name": "山田次郎",
-  "profile_image": "https://storage.googleapis.com/bondpoint-images/uuid.jpg"
+  "profile_image": "https://storage.googleapis.com/spotMe-images/uuid.jpg"
 }
 ```
 
@@ -241,7 +241,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...
     {
       "user_id": "123e4567-e89b-12d3-a456-426614174000",
       "user_name": "山田太郎",
-      "profile_image": "https://storage.googleapis.com/bondpoint-images/user1.jpg",
+      "profile_image": "https://storage.googleapis.com/spotMe-images/user1.jpg",
       "status_type": "ON_TRAIN",
       "status_display": "🚃 電車乗車中",
       "custom_message": "山手線で向かってます",
@@ -419,7 +419,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3O
 ```python
 origins = [
     "http://localhost:3000",  # 開発環境
-    "https://app.bondpoint.com",  # 本番環境
+    "https://app.spotMe.com",  # 本番環境
 ]
 ```
 
