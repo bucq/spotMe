@@ -49,7 +49,7 @@ export default function SignInScreen() {
             <Text style={styles.label}>メールアドレス</Text>
             <TextInput
               style={styles.input}
-              placeholder="example@email.com"
+              placeholder="sample1@example.com"
               value={email}
               onChangeText={setEmail}
               autoCapitalize="none"

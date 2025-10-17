@@ -36,6 +36,9 @@ export const signUp = async (email: string, password: string, displayName?: stri
 
     return { user: userCredential.user, error: null };
   } catch (error: any) {
+    if (error.code === 'auth/email-already-exists') {
+      return { user: null, error: 'このメールアドレスは既に使用されています' };
+    }
     return { user: null, error: error.message };
   }
 };
@@ -45,7 +48,7 @@ export const signIn = async (email: string, password: string) => {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     return { user: userCredential.user, error: null };
   } catch (error: any) {
-    return { user: null, error: error.message };
+    return { user: null, error: 'ログイン情報が正しくありません' };
   }
 };
 
